@@ -6,16 +6,44 @@
       "password": "123",
       "username": "deniska",
       "subscriptions": [],
-      "subscribers":[],
+      "subscribers": [],
       "likeVideo": []
+    },
+    {
+      "email": "321",
+      "password": "312",
+      "username": "userName-88",
+      "subscriptions": [],
+      "subscribers": [],
+      "likeVideo": [],
+      "id": 2
+    },
+    {
+      "email": "333",
+      "password": "333",
+      "username": "userName-116",
+      "subscriptions": [],
+      "subscribers": [],
+      "likeVideo": [],
+      "id": 3
     }
   ],
   "videos": [
     {
       "id": 1,
       "userId": 1,
-      "video": "",
-      "image": "",
+      "title": "Сражаемся с пидорами",
+      "video": "https://youtu.be/Rsxao9ptdmI",
+      "image": "https://ytfl.ru/wp-content/uploads/2019/07/500000_prevyu1-585x332.png",
+      "comments": [],
+      "like": 0
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "title": "Переночевал В ГОСТИННОЙ",
+      "video": "https://youtu.be/Rsxao9ptdmI",
+      "image": "https://ytfl.ru/wp-content/uploads/2019/06/sobolev-585x332.jpg",
       "comments": [],
       "like": 0
     }

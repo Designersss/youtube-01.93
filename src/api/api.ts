@@ -1,5 +1,6 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query";
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {API_QUERY} from "../utils/utils.ts";
+import {IUser, IVideos} from "../global-types/global-types.ts";
 
 
 export const api = createApi({
@@ -8,17 +9,26 @@ export const api = createApi({
         baseUrl: API_QUERY
     }),
     endpoints: builder => ({
-        getUser: builder.query({
+        getUser: builder.query<IUser[], Array<IUser>>({
             query: () => '/users'
         }),
-        getOneUser: builder.query({
-            query: (id) => `/users${id}`
+        getOneUser: builder.query<IUser, string>({
+            query: (id) => `/users/${id}`
         }),
-        getVideos: builder.query({
+        getVideos: builder.query<IVideos[], Array<IVideos>>({
             query: () => '/videos'
         }),
         getOneVideo: builder.query({
             query: (id) => `/videos/${id}`
+        }),
+        createUser: builder.mutation({
+            query: (user) => ({
+                url: '/users',
+                method: 'POST',
+                body: user,
+            })
         })
     })
 })
+
+export const {useGetUserQuery, useCreateUserMutation, useGetVideosQuery, useGetOneVideoQuery, useGetOneUserQuery} = api
