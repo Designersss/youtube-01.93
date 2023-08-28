@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "123",
+      "password": "123",
+      "username": "deniska",
+      "subscriptions": [],
+      "subscribers":[],
+      "likeVideo": []
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "userId": 1,
+      "video": "",
+      "image": "",
+      "comments": [],
+      "like": 0
+    }
+  ]
+}
