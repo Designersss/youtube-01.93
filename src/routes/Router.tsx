@@ -1,7 +1,13 @@
 import {Route, Routes} from "react-router-dom";
 import Home from "../pages/Home.tsx";
-import {REACT_ROUTER_HOME, REACT_ROUTER_LOGIN, REACT_ROUTER_REGISTRATION} from "../utils/utils.ts";
+import {
+    REACT_ROUTER_HOME,
+    REACT_ROUTER_LOGIN,
+    REACT_ROUTER_REGISTRATION,
+    REACT_ROUTER_VIDEO_PAGE
+} from "../utils/utils.ts";
 import Login from "../pages/Login.tsx";
+import VideoPage from "../pages/VideoPage.tsx";
 
 const Router = () => {
     return (
@@ -9,6 +15,7 @@ const Router = () => {
             <Route path={REACT_ROUTER_HOME} element={<Home/>} />
             <Route path={REACT_ROUTER_LOGIN} element={<Login/>} />
             <Route path={REACT_ROUTER_REGISTRATION} element={<Login/>} />
+            <Route path={REACT_ROUTER_VIDEO_PAGE} element={<VideoPage/>} />
         </Routes>
     );
 };

@@ -5,7 +5,7 @@ import VideoCover from "../components/VideoCover.tsx";
 const Home = () => {
     const {data} = useGetVideosQuery([])
     return (
-        <div className='grid grid-cols-4 gap-9'>
+        <div className='grid grid-cols-4 gap-3'>
             {
                 data
                     ?
@@ -13,7 +13,6 @@ const Home = () => {
                     :
                     <p>Ничего не найдено</p>
             }
-
         </div>
     );
 };

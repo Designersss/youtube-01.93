@@ -12,13 +12,13 @@ export const api = createApi({
         getUser: builder.query<IUser[], Array<IUser>>({
             query: () => '/users'
         }),
-        getOneUser: builder.query<IUser, string>({
+        getOneUser: builder.query<IUser, string | undefined>({
             query: (id) => `/users/${id}`
         }),
         getVideos: builder.query<IVideos[], Array<IVideos>>({
             query: () => '/videos'
         }),
-        getOneVideo: builder.query({
+        getOneVideo: builder.query<IVideos, string | undefined>({
             query: (id) => `/videos/${id}`
         }),
         createUser: builder.mutation({

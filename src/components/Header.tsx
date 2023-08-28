@@ -13,7 +13,7 @@ const Header = () => {
     }
 
     return (
-        <div className='flex justify-between'>
+        <div className='flex justify-between items-center'>
             <Link to={REACT_ROUTER_HOME}>Youtube</Link>
             <div><input type="text" placeholder='Поиск'/></div>
             {user.username

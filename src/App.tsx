@@ -4,6 +4,7 @@ import Header from "./components/Header.tsx";
 import {useEffect} from "react";
 import {useGetUserQuery} from "./api/api.ts";
 import {useActions} from "./hooks/useActions.ts";
+import LeftMenu from "./components/LeftMenu.tsx";
 
 function App() {
     const {data} = useGetUserQuery([])
@@ -17,7 +18,12 @@ function App() {
     return (
         <BrowserRouter>
             <Header/>
-            <Router/>
+            <div className='flex mt-4'>
+                <LeftMenu />
+                <div className='ml-8 mr-8'>
+                    <Router/>
+                </div>
+            </div>
         </BrowserRouter>
     )
 }
