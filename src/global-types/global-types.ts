@@ -11,23 +11,30 @@ export interface IUser {
 
 export interface IVideos {
     id?: number,
-    userId: string,
+    userId: number,
     video: string,
     title: string,
     image: string,
-    comments: IDid[],
+    comments: IComments[],
     like: number
 }
 
 export interface ILike {
     id?: number,
-    userId: string,
+    userId: number,
     video: string,
     image: string,
 }
 
 export interface IDid {
     id?: number,
-    userId: string,
-    username: string
+    userId: number | undefined,
+    username: string | undefined
+}
+
+export interface IComments {
+    id?: number,
+    userId: number | undefined,
+    username: string,
+    title: string
 }
