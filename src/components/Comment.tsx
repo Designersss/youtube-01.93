@@ -1,8 +1,9 @@
 import {FC} from 'react';
 import {Link} from "react-router-dom";
-interface CommentProps {
+import {IComments} from "../global-types/global-types.ts";
+interface CommentProps extends IComments{
     title: string,
-    userId: number,
+    userId: number | undefined,
     username: string
 }
 const Comment:FC<CommentProps> = ({title, userId, username}) => {

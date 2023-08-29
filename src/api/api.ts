@@ -14,7 +14,7 @@ export const api = createApi({
             query: () => '/users',
             providesTags: () => [{type: 'api'}]
         }),
-        getOneUser: builder.query<IUser, string | undefined>({
+        getOneUser: builder.query<IUser, number | string | undefined>({
             query: (id) => `/users/${id}`,
             providesTags: () => [{type: 'api'}]
         }),
@@ -24,6 +24,10 @@ export const api = createApi({
         }),
         getOneVideo: builder.query<IVideos, string | undefined>({
             query: (id) => `/videos/${id}`,
+            providesTags: () => [{type: 'api'}]
+        }),
+        getUserVideo: builder.query<IVideos[], string | undefined>({
+            query: (id) => `/videos?userId=${id}`,
             providesTags: () => [{type: 'api'}]
         }),
         createUser: builder.mutation({
@@ -49,8 +53,8 @@ export const api = createApi({
                 body: user
             }),
             invalidatesTags: () => [{type: 'api'}]
-        }),
+        })
     })
 })
 
-export const {useGetUserQuery, useGetAddSubMutation, useCreateCommentMutation, useCreateUserMutation, useGetVideosQuery, useGetOneVideoQuery, useGetOneUserQuery} = api
+export const {useGetUserQuery, useGetUserVideoQuery, useGetAddSubMutation, useCreateCommentMutation, useCreateUserMutation, useGetVideosQuery, useGetOneVideoQuery, useGetOneUserQuery} = api

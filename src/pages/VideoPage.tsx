@@ -28,7 +28,7 @@ const VideoPage = () => {
                 {
                     data
                         ? <div>
-                            <iframe className='w-[1340px] h-[755px]' src={data.video + '?autoplay=1&mute=0'}
+                            <iframe className='w-full h-[774px]' src={data.video + '?autoplay=1&mute=0'}
                                     allowFullScreen={true}></iframe>
                             <div className='flex mt-5'>
                                 <div>
@@ -51,9 +51,10 @@ const VideoPage = () => {
                         : <></>
                 }
             </div>
-            <div className='ml-14 col-span-1'>
+            <div className='flex col-span-2  items-center w-full mt-4 mb-4'> <p className='text-xl w-60'>Популярные видео</p> <div className='flex w-full h-0.5 bg-[#595959] ml-4'></div></div>
+            <div className='col-span-2 flex -ml-6'>
                 {currentData
-                    ? currentData.slice(0, 5).map(el => <Link className='block w-[300px] first:mt-0 mt-7'
+                    ? currentData.slice(0, 5).map(el => <Link className='block w-[300px] mt-2 first:mt-2 ml-5'
                                                   to={`/video/${el.id}`}>
                         <img className='block rounded-md' src={el.image} alt=""/>
                         <p className='block mt-2'>{el.title}</p>
@@ -61,11 +62,11 @@ const VideoPage = () => {
                     : <></>}
             </div>
             <div className='col-span-3'>
-                <p className='flex items-center'>Комментарии <div className='flex w-full h-0.5 bg-[#595959] ml-4'></div></p>
+                <div className='flex items-center text-xl mt-4 mb-4'>Комментарии <div className='flex w-full h-0.5 bg-[#595959] ml-4'></div></div>
                 <input value={title} onChange={e => setTitle(e.target.value)} className='px-2 py-1 rounded-md outline-0 text-black' placeholder='Введите текст' type="text"/>
                 <button className='bg-[#242424] p-2 rounded-md ml-2' onClick={sendMessage}>Отправить</button>
                 <div>
-                    {data?.comments.length ? data?.comments.map(el => <Comment userId={el.userId} title={el.title} username={el.username} />) : <span className='flex text-xl mt-5 mb-10'>Тут пока ничего нету, будьте первым</span>}
+                    {data?.comments.length ? data?.comments.map(el => <Comment key={el.id} userId={el.userId} title={el.title} username={el.username} />).reverse() : <span className='flex text-xl mt-5 mb-10'>Тут пока ничего нету, будьте первым</span>}
                 </div>
             </div>
         </div>

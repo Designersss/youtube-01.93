@@ -18,7 +18,7 @@ function App() {
     return (
         <BrowserRouter>
             <Header/>
-            <div className='flex mt-4'>
+            <div className='flex'>
                 <LeftMenu />
                 <div className='ml-8 mr-8'>
                     <Router/>

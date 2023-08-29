@@ -6,12 +6,12 @@ interface VideoCoverProps {
     title: string,
     likes: number,
     id: number | undefined,
-    userId: string | undefined,
+    userId: number,
     image: string
 }
 
 const VideoCover: FC<VideoCoverProps> = ({title, userId, id, likes, image}) => {
-    const {data} = useGetOneUserQuery(userId as string)
+    const {data} = useGetOneUserQuery(userId)
     return (
         <Link to={`/video/${id}`} className='bg-[#242424] p-2 rounded-md'>
             <img className='rounded-xl' src={image} alt=""/>

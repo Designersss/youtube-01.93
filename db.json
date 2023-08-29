@@ -11,7 +11,12 @@
           "username": "userName-116"
         }
       ],
-      "subscribers": [],
+      "subscribers": [
+        {
+          "userId": 4,
+          "username": "userName-108"
+        }
+      ],
       "likeVideo": []
     },
     {
@@ -36,6 +41,20 @@
       ],
       "likeVideo": [],
       "id": 3
+    },
+    {
+      "email": "234",
+      "password": "234",
+      "username": "userName-108",
+      "subscriptions": [
+        {
+          "userId": 1,
+          "username": "deniska"
+        }
+      ],
+      "subscribers": [],
+      "likeVideo": [],
+      "id": 4
     }
   ],
   "videos": [
@@ -48,6 +67,16 @@
       "comments": [
         {
           "title": "6767",
+          "username": "deniska",
+          "userId": 1
+        },
+        {
+          "title": "привет",
+          "username": "deniska",
+          "userId": 1
+        },
+        {
+          "title": "Пока",
           "username": "deniska",
           "userId": 1
         }
@@ -81,6 +110,16 @@
           "title": "123333",
           "username": "deniska",
           "userId": 1
+        },
+        {
+          "title": "67",
+          "username": "deniska",
+          "userId": 1
+        },
+        {
+          "title": "12",
+          "username": "deniska",
+          "userId": 1
         }
       ],
       "like": 0
@@ -91,7 +130,13 @@
       "title": "Переночевал В ГОСТИННОЙ",
       "video": "https://www.youtube.com/embed/JCgk-mnngY4",
       "image": "https://ytfl.ru/wp-content/uploads/2019/06/sobolev-585x332.jpg",
-      "comments": [],
+      "comments": [
+        {
+          "title": "Dude!",
+          "username": "deniska",
+          "userId": 1
+        }
+      ],
       "like": 0
     },
     {
